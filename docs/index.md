@@ -28,10 +28,10 @@ Pretty much any ESP8266 module with a built-in USB-serial converter will do. It'
 
 Recommended ESP8266 Modules:
 
-* [Gizwits Witty](Gizwits-Witty)
-* [NodeMCU](NodeMCU)
+* [Gizwits Witty](Witty/info)
+* [NodeMCU](NodeMCU/info)
 
-If you're using any module other than the [Gizwits Witty](Gizwits-Witty), then you should follow the [breadboard setup guide](Breadboard-Setup-Guide) to hook up all your parts the right way.
+If you're using any module other than the [Gizwits Witty](Witty/info), then you should follow the [breadboard setup guide](Breadboard/setup) to hook up all your parts the right way.
 
 
 # Lessons
