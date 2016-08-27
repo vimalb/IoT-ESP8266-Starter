@@ -39,7 +39,7 @@ The most common additional drivers you may want to install are:
 
 The Arduino IDE you installed does not natively support the ESP8266. Fortunately it's quite easy to add support via the "Boards Manager".
 
-The official installation directions are [here](https://github.com/esp8266/Arduino#installing-with-boards-manager), however they are simple enough to include below:
+Note: Official documentation for Arduino ESP8266 support can be found [here](https://github.com/esp8266/Arduino).
 
 ### Add the ESP8266 Board Manager URL
 
