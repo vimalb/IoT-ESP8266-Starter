@@ -55,11 +55,11 @@ For this tutorial, you will need the following:
   * Make your ESP8266 publish a "button pushed" message each time a physical button is pressed
   * Make your webpage display the "button pushed" message whenever it is received
 * [**Lesson 10 - IoT LED**](Lesson_10/lesson.html)
-  * Make your webpage publish a "control LED message" each time a HTML button is pressed 
-  * Make your ESP8266 control its LED each time it receives a "control LED message"
+  * Make your webpage publish a "turn led on" or "turn led off" message when HTML buttons are pushed 
+  * Make your ESP8266 control its LED each time it receives a "turn led on" or "turn led off" message
 * [**Lesson 11 - IoT Sensor**](Lesson_11/lesson.html)
-  * Make your ESP8266 publish a "light sensor reading message" every 5 seconds with the value of the light sensor
-  * Make your webpage update with the latest value of the light sensor each time it receives a "light sensor reading message"
+  * Make your ESP8266 publish a "light sensor" message every 5 seconds with the value of the light sensor
+  * Make your webpage update with the latest value of the light sensor each time it receives a "light sensor" message
 
 
 
