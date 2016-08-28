@@ -8,10 +8,10 @@
 # Site settings
 title: IoT Tutorial for ESP8266
 email: vimal@alum.mit.edu
-#baseurl: "/IoT-ESP8266-Starter" # the subpath of your site, e.g. /blog
-baseurl: "/." # the subpath of your site, e.g. /blog
-#url: "https://vimalb.github.io" # the base hostname & protocol for your site
-url: "http://localhost:5000" # the base hostname & protocol for your site
+baseurl: "/IoT-ESP8266-Starter" # the subpath of your site, e.g. /blog
+#baseurl: "/." # the subpath of your site, e.g. /blog
+url: "https://vimalb.github.io" # the base hostname & protocol for your site
+#url: "http://localhost:5000" # the base hostname & protocol for your site
 github_username:  vimalb
 
 # Build settings
