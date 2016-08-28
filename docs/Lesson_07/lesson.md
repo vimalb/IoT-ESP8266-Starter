@@ -34,7 +34,7 @@ Note: Be sure to replace ```<your_random_topic_root>``` with the exact same valu
 
 Before we proceed, make sure your index.html looks like [this](index.html) and your app.js looks like [this](app.js) except with the right values for the following substituted in:
 
-* <your_random_topic_root>
+* ```<your_random_topic_root>```
 
 Close any open copies of your web page that you may have, and then double-click on ```index.html``` to open it up in a new browser window or tab. 
 

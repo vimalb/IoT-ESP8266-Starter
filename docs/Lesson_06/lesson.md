@@ -116,14 +116,14 @@ MQTT_CLIENT.onMessageArrived = myMessageArrived;
 
 Before we proceed, make sure your index.html looks like [this](index.html) and your app.js looks like [this](app.js) except with the right values for the following substituted in:
 
-* <your_random_topic_root>
+* ```<your_random_topic_root>```
 
 Also make sure your Arduino code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
 
-* <your wifi access point name>
-* <your wifi access point password>
-* <your_random_device_client_id>
-* <your_random_topic_root>
+* ```<your wifi access point name>```
+* ```<your wifi access point password>```
+* ```<your_random_device_client_id>```
+* ```<your_random_topic_root>```
 
 
 Close any open copies of your web page that you may have, and then double-click on ```index.html``` to open it up in a new browser window or tab. Wait a couple seconds, and you should start to see incoming message payloads sent by your ESP8266 module running your Arduino code: 

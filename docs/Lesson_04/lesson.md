@@ -138,10 +138,10 @@ Note: Be sure to replace ```<your_random_topic_root>``` with a unique randomly c
 
 Before we proceed, make sure your code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
 
-* <your wifi access point name>
-* <your wifi access point password>
-* <your_random_device_client_id>
-* <your_random_topic_root>
+* ```<your wifi access point name>```
+* ```<your wifi access point password>```
+* ```<your_random_device_client_id>```
+* ```<your_random_topic_root>```
 
 
 Download your sketch and open up the serial monitor - you should see log messages once you have connected successfully to the MQTT broker. Also your ESP8266 module should be publishing a message to the MQTT broker every couple seconds on the topic ```<your_random_topic_root>/iot_tutorial/from_esp8266```.

@@ -44,8 +44,8 @@ Note: Don't forget to substitute ```<your wifi access point name>``` and ```<you
 
 Before we proceed, make sure your code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
 
-* <your wifi access point name>
-* <your wifi access point password>
+* ```<your wifi access point name>```
+* ```<your wifi access point password>```
 
 
 ### Get your module IP address

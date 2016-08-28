@@ -54,8 +54,8 @@ If you're using any module other than the [Gizwits Witty](Witty/info.html), then
 * [Lesson 8 - ESP8266 MQTT Subscribe](Lesson_08/lesson.html)
   * Make your ESP8266 subscribe to messages from an MQTT server
 * [Lesson 9 - IoT Button](Lesson_09/lesson.html)
-  * Make your ESP8266 publish a "button push message" each time a physical button is pressed
-  * Make your webpage display an alert each time it receives a "button push message"
+  * Make your ESP8266 publish a "button pushed" message each time a physical button is pressed
+  * Make your webpage display the "button pushed" message whenever it is received
 * [Lesson 10 - IoT LED](Lesson_10/lesson.html)
   * Make your webpage publish a "control LED message" each time a HTML button is pressed 
   * Make your ESP8266 control its LED each time it receives a "control LED message"
