@@ -1,5 +1,6 @@
 // Base ESP8266
 #include <ESP8266WiFi.h>
+WiFiClient WIFI_CLIENT;
 
 #define LIGHT_SENSOR A0
 #define LED 15

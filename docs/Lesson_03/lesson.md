@@ -11,19 +11,19 @@ We generally want to connect to WiFi as soon as our module starts up, so let's a
 
 ```
 setup() {
-	...whatever was in setup before...
+  ...whatever was in setup before...
 
-	// Attempt to connect to a specific access point
-	WiFi.begin("<your wifi access point name>", "<your wifi access point password>");
+  // Attempt to connect to a specific access point
+  WiFi.begin("<your wifi access point name>", "<your wifi access point password>");
 
-	// Keep checking the connection status until it is connected
-	while (WiFi.status() != WL_CONNECTED) {
-	    delay(500);
-	}
+  // Keep checking the connection status until it is connected
+  while (WiFi.status() != WL_CONNECTED) {
+      delay(500);
+  }
 
-	// Print the IP address of your module
-	Serial.println("IP address: ");
-	Serial.println(WiFi.localIP());
+  // Print the IP address of your module
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
 }
 ```
 

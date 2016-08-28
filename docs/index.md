@@ -44,7 +44,7 @@ If you're using any module other than the [Gizwits Witty](Witty/info), then you 
   * Connect your ESP8266 to WiFi and ping it
 * [Lesson 4 - ESP8266 MQTT Publish](Lesson_04/lesson)
   * Make your ESP8266 publish a message to an MQTT server
-* [Lesson 5 - HTML/CSS/Javascript Hello World](Lesson_05/lesson)
+* [Lesson 5 - HTML/Javascript Hello World](Lesson_05/lesson)
   * Make a simple webpage
 * [Lesson 6 - Javascript MQTT Subscribe](Lesson_06/lesson)
   * Make your webpage subscribe to messages from an MQTT server

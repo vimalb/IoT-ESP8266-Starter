@@ -17,9 +17,10 @@ At the top of your sketch, add the following code:
 ```
 // Base ESP8266
 #include <ESP8266WiFi.h>
+WiFiClient WIFI_CLIENT;
 ```
 
-This will "include" a reference to ESP8266-specific libraries and constants which are necessary for your code to run on an ESP8266
+This will "include" a reference to ESP8266-specific libraries and constants which are necessary for your code to run on an ESP8266. It will also create a global WifiClient which other parts of your code may use to access the network.
 
 Note: Anything that comes after ```//``` is a comment - it will be ignored by Arduino but is helpful to keep around so that you remember what your code is supposed to do.
 
@@ -45,17 +46,17 @@ The code within the curly braces of the ```setup()``` function is run once every
 
 ```
 void setup() {
-	// Initialize the serial port
-	Serial.begin(115200);
+  // Initialize the serial port
+  Serial.begin(115200);
 
-	// Configure light sensor pin as an input
-	pinMode(LIGHT_SENSOR, INPUT);
+  // Configure light sensor pin as an input
+  pinMode(LIGHT_SENSOR, INPUT);
 
-	// Configure LED pin as an output
-	pinMode(LED, OUTPUT);
+  // Configure LED pin as an output
+  pinMode(LED, OUTPUT);
 
-	// Configure BUTTON pin as an input with a pullup
-	pinMode(BUTTON, INPUT_PULLUP);
+  // Configure BUTTON pin as an input with a pullup
+  pinMode(BUTTON, INPUT_PULLUP);
 }
 ```
 
