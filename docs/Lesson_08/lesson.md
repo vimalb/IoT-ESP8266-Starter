@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 8
+title: Lesson 8 - ESP8266 MQTT Subscribe
 ---
-
-# Lesson 8 - ESP8266 MQTT Subscribe
 
 Now that we have a web page which is publishing MQTT messages, let's update our Arduino code to subscribe to those messages.
 

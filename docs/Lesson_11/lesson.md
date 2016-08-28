@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 11
+title: Lesson 11 - IoT Sensor
 ---
-
-# Lesson 11 - IoT Sensor
 
 One pretty common IoT use case is having a remote sensor stream back telemetry. Let's make our ESP8266 module periodically publish a light sensor reading which can be displayed on our web page.
 

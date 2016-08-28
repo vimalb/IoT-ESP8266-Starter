@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 2
+title: Lesson 2 - ESP8266 Hello World
 ---
-
-# Lesson 2 - ESP8266 Hello World
 
 ## Create a new MyIoTWidget Arduino sketch
 

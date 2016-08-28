@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 7
+title: Lesson 7 - Javascript MQTT Publish
 ---
-
-# Lesson 7 - Javascript MQTT Publish
 
 Now that our web page is subscribing to MQTT topics and receiving messages from our ESP8266 module, let's make it also publish messages to a different topic whiich our ESP8266 module can subscribe to. This way we get two-way communication between our web page and our ESP8266 module. 
 

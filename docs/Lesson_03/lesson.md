@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 3
+title: Lesson 3 - ESP8266 WiFi Setup
 ---
-
-# Lesson 3 - ESP8266 WiFi Setup
 
 ## Connect to WiFi in setup()
 

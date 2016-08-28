@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 4
+title: Lesson 4 - ESP8266 MQTT Publish
 ---
-
-# Lesson 4 - ESP8266 MQTT Publish
 
 The MQTT protocol is a lightwight publish-subscribe protocol which is very popular for IoT applications.
 

@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 6
+title: Lesson 6 - Javascript MQTT Subscribe
 ---
-
-# Lesson 6 - Javascript MQTT Subscribe
 
 Now that we have a basic website in place, let's update it to subscribe to a MQTT topic and display incoming messages.
 

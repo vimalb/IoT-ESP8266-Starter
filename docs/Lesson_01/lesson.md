@@ -1,10 +1,7 @@
 ---
 layout: page
-title: Lesson 1
+title: Lesson 1 - Arduino Setup
 ---
-
-# Lesson 1 - Arduino Software Setup
-
 
 ## Download and Install Arduino IDE
 

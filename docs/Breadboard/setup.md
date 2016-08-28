@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Breadboard Setup Guide
+title: Setup Guide
 ---
-
-# Breadboard Setup Guide
 
 ## Intro
 

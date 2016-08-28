@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 10
+title: Lesson 10 - IoT LED
 ---
-
-# Lesson 10 - IoT LED
 
 Now that we've made our web page do something when an action is triggered on our ESP8266 module, let's flip it around and make our ESP8266 module do something when an action is triggered on our web page.
 

@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Gizwits Witty
+title: Gizwits Witty Module
 ---
-
-# Gizwits Witty Module Info
 
   * [$5 on AliExpress](http://www.aliexpress.com/item/10PCS-LOT-ESP8266-serial-WIFI-model-ESP-14-Authenticity-Guaranteed/32592556329.html)
   * [$12 on Amazon](https://www.amazon.com/Wangdd22-ESP8266-Development-ESP-12F-nodemcu/dp/B01EJ734CA)

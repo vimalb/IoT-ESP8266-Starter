@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 9
+title: Lesson 9 - IoT Button
 ---
-
-# Lesson 9 - IoT Button
 
 Now that we have the basics of a web page and an ESP8266 module which can pass messages back and forth over the internet, let's wee if we can make our website react to a button being pressed on our ESP8266 module
 

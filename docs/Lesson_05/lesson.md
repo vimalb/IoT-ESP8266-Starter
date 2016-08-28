@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Lesson 5
+title: Lesson 5 - HTML/Javascript Hello World
 ---
-
-# Lesson 5 - HTML/Javascript Hello World
 
 Just as you were getting comfortable with Arduino, let's switch over to making a website!
 
