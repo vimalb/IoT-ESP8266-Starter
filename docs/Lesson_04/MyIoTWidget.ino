@@ -46,7 +46,7 @@ void reconnect() {
   while (!MQTT_CLIENT.connected()) {
     // Attempt to connect
     Serial.println("Attempt to connect to MQTT broker");
-    MQTT_CLIENT.connect("<your_random_device_name>");
+    MQTT_CLIENT.connect("<your_random_device_client_id>");
 
     // Wait some time to space out connection requests
     delay(3000);

@@ -5,7 +5,7 @@ title: Lesson 3
 
 # Lesson 3 - ESP8266 WiFi Setup
 
-## Connect to WiFi in ```setup()```
+## Connect to WiFi in setup()
 
 We generally want to connect to WiFi as soon as our module starts up, so let's add the following code to the end of ```setup()```
 

@@ -16,6 +16,14 @@ For this tutorial we will use the free public [```iot.eclipse.org```](http://iot
 * address: iot.eclipse.org
 * port: 1883 (tcp), 80 (websockets)
 
+#### MQTT Clients
+
+Each client device which connects to an MQTT broker is asked to provide a unique client identifier. The broker uses this unique client identifier to track clients and push messages to them. 
+
+If a broker receives multiple connections with the same client identifier, it may choose to send messages to only one of them, even if they all subscribed to the same topic. 
+
+In general each physical device client should have a unique client identifier. Likewise, each running copy of a software client should have its own unique client identifier. 
+
 
 #### MQTT Topics
 
@@ -64,7 +72,7 @@ Near the top of your sketch immediately underneath all of the existing #include 
 PubSubClient MQTT_CLIENT;
 ```
 
-## Create a ```reconnect()``` function
+## Create a reconnect() function
 
 Network connections are not always perfectly reliable - they sometimes get accidentally disconnected which means all network-aware code should be capable of reconnecting as necessary.
 
@@ -82,7 +90,7 @@ void reconnect() {
   while (!MQTT_CLIENT.connected()) {
     // Attempt to connect
     Serial.println("Attempt to connect to MQTT broker");
-    MQTT_CLIENT.connect("<your_random_device_name>");
+    MQTT_CLIENT.connect("<your_random_device_client_id>");
 
     // Wait some time to space out connection requests
     delay(3000);
@@ -92,10 +100,10 @@ void reconnect() {
 }
 ```
 
-Note: Be sure to replace ```<your_random_device_name>``` with a randomly chosen identifier for your device, like ```esp8266_4562234```
+Note: Be sure to replace ```<your_random_device_client_id>``` with a randomly chosen identifier for your device, like ```esp8266_4562234```
 
 
-## Update ```loop()``` to reconnect and publish a message
+## Update loop() to reconnect and publish a message
 
 Our old ```loop()``` simply blinked an LED, but now we need it to be a bit smarter. Specifically every 5 seconds, let's have it do the following:
 

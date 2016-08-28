@@ -10,7 +10,7 @@ Just as you were getting comfortable with Arduino, let's switch over to making a
 There are thousands of good resources online for learning basic HTML, CSS, and Javascript, and there are thousands of tools, utilities, libraries, and frameworks to choose from.
 
 
-## Create an ```index.html``` web page
+## Create an index.html web page
 
 For a good introduction to HTML syntax and some basic tags, check out the [w3schools HTML tutorial](http://www.w3schools.com/html/default.asp)
 
@@ -30,7 +30,7 @@ For this tutorial, we'll be making an exteremly simple HTML page.
 
   <!-- this is an HTML comment -->
   <body>
-    <h1>Hello World!</h1>
+    <h1>Hello World Webpage</h1>
   </body>
 
 </html>
@@ -41,7 +41,7 @@ Now if you double-click on index.html it should open up in a web browser and you
 ![HTML Hello World](html_hello_world.png "HTML Hello World")
 
 
-## Create an ```app.js``` javascript script
+## Create an app.js javascript script
 
 For a good introduction to Javascript syntax and some basic functions, check out the [w3schools Javascript tutorial](http://www.w3schools.com/js/default.asp)
 
@@ -56,7 +56,7 @@ alert("Hello world from javascript!");
 ```
 
 
-## Add javascript to ```index.html```
+## Add javascript to index.html
 
 Javascript can be added to a HTML page by including ```<script>``` tags which reference external javascript files.
 
@@ -66,9 +66,12 @@ Let's add the jquery javascript library and our own custom javascript file to ou
 
 ```
   <body>
-    <h1>Hello World!</h1>
+    <h1>Hello World Webpage</h1>
 
+    <!-- import jquery library -->
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <!-- our javascript -->
     <script src="app.js"></script>
   </body>
 ```
@@ -86,14 +89,17 @@ As an example first let's add a ```<button>``` tag to the body. To do that, repl
 
 ```
   <body>
-    <h1>Hello World!</h1>
+    <h1>Hello World Webpage</h1>
 
     <!-- this is the secton wrapping our new button -->
     <div>
       <button onClick="myButtonWasClicked()">Press me!</button>
     </div>
 
+    <!-- import jquery library -->
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <!-- our javascript -->
     <script src="app.js"></script>
   </body>
 ```
@@ -119,7 +125,7 @@ As an example first let's add an empty ```<div>``` tag to the body which we will
 
 ```
   <body>
-    <h1>Hello World!</h1>
+    <h1>Hello World Webpage</h1>
 
     <!-- this is the secton wrapping our new button -->
     <div>
@@ -130,7 +136,10 @@ As an example first let's add an empty ```<div>``` tag to the body which we will
     <div id="updateMe">
     </div>
 
+    <!-- import jquery library -->
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <!-- our javascript -->
     <script src="app.js"></script>
   </body>
 ```
@@ -138,6 +147,7 @@ As an example first let's add an empty ```<div>``` tag to the body which we will
 Now let's change our button to update the ```<div>``` text instead of showing an alert. In ```app.js```, replace the ```myButtonWasClicked()``` function with the following:
 
 ```
+// This is the function which handles button clicks
 function myButtonWasClicked() {
     // Select the tag with id="updateMe" and set its inner content
     $("#updateMe").text("The text is updated!");

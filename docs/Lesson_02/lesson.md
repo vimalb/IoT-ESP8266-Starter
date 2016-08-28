@@ -10,7 +10,7 @@ title: Lesson 2
 1. Open Arduino and make sure you see a default sketch
 2. Go to File->Save As and save it as ```MyIoTWidget``` in a convenient location
 
-## Add some ```#include```
+## Add some #includes
 
 At the top of your sketch, add the following code:
 
@@ -25,7 +25,7 @@ This will "include" a reference to ESP8266-specific libraries and constants whic
 Note: Anything that comes after ```//``` is a comment - it will be ignored by Arduino but is helpful to keep around so that you remember what your code is supposed to do.
 
 
-## Add some ```#define```
+## Add some #defines
 
 In the Arduino language, you can define one name to mean something else using ```#define```. This is typically used to make your code easier to read. 
 
@@ -40,7 +40,7 @@ Right after the ```#include``` lines you added earlier, but before ```setup()```
 Here we have included a ```#define``` for each of the pins that we will use on the ESP8266 module - this way we can refer to them by the names we have given above rather than having to remember their pin numbers.
 
 
-## Update ```setup()```
+## Update setup()
 
 The code within the curly braces of the ```setup()``` function is run once every time the ESP8266 starts up. Let's change this function to the following: 
 
@@ -60,7 +60,7 @@ void setup() {
 }
 ```
 
-## Update ```loop()```
+## Update loop()
 
 The code within the curly braces of the ```loop()``` function is run once in a never-ending loop. let's change this function to the following:
 
