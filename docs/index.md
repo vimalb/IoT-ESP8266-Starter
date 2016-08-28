@@ -17,6 +17,7 @@ title: ESP8266 IoT Tutorial
 # Prerequisites
 
 For this tutorial, you will need the following:
+
   * Computer running Windows or OSX
   * ESP8266 module
   * Other hardware
@@ -28,37 +29,37 @@ Pretty much any ESP8266 module with a built-in USB-serial converter will do. It'
 
 Recommended ESP8266 Modules:
 
-* [Gizwits Witty](Witty/info)
-* [NodeMCU](NodeMCU/info)
+* [Gizwits Witty](Witty/info.html)
+* [NodeMCU](NodeMCU/info.html)
 
-If you're using any module other than the [Gizwits Witty](Witty/info), then you should follow the [breadboard setup guide](Breadboard/setup) to hook up all your parts the right way.
+If you're using any module other than the [Gizwits Witty](Witty/info.html), then you should follow the [breadboard setup guide](Breadboard/setup.html) to hook up all your parts the right way.
 
 
 # Lessons
 
-* [Lesson 1 - Arduino Software Setup](Lesson_01/lesson)
+* [Lesson 1 - Arduino Software Setup](Lesson_01/lesson.html)
   * Get your Arduino development set up
-* [Lesson 2 - ESP8266 Hello World](Lesson_02/lesson)
+* [Lesson 2 - ESP8266 Hello World](Lesson_02/lesson.html)
   * Upload an Arduino sketch to your ESP8266 to blink an LED
-* [Lesson 3 - ESP8266 WiFi Setup](Lesson_03/lesson)
+* [Lesson 3 - ESP8266 WiFi Setup](Lesson_03/lesson.html)
   * Connect your ESP8266 to WiFi and ping it
-* [Lesson 4 - ESP8266 MQTT Publish](Lesson_04/lesson)
+* [Lesson 4 - ESP8266 MQTT Publish](Lesson_04/lesson.html)
   * Make your ESP8266 publish a message to an MQTT server
-* [Lesson 5 - HTML/Javascript Hello World](Lesson_05/lesson)
+* [Lesson 5 - HTML/Javascript Hello World](Lesson_05/lesson.html)
   * Make a simple webpage
-* [Lesson 6 - Javascript MQTT Subscribe](Lesson_06/lesson)
+* [Lesson 6 - Javascript MQTT Subscribe](Lesson_06/lesson.html)
   * Make your webpage subscribe to messages from an MQTT server
-* [Lesson 7 - Javascript MQTT Publish](Lesson_07/lesson)
+* [Lesson 7 - Javascript MQTT Publish](Lesson_07/lesson.html)
   * Make your webpage publish messages to an MQTT server
-* [Lesson 8 - ESP8266 MQTT Subscribe](Lesson_08/lesson)
+* [Lesson 8 - ESP8266 MQTT Subscribe](Lesson_08/lesson.html)
   * Make your ESP8266 subscribe to messages from an MQTT server
-* [Lesson 9 - IoT Button](Lesson_09/lesson)
+* [Lesson 9 - IoT Button](Lesson_09/lesson.html)
   * Make your ESP8266 publish a "button push message" each time a physical button is pressed
   * Make your webpage display an alert each time it receives a "button push message"
-* [Lesson 10 - IoT LED](Lesson_10/lesson)
+* [Lesson 10 - IoT LED](Lesson_10/lesson.html)
   * Make your webpage publish a "control LED message" each time a HTML button is pressed 
   * Make your ESP8266 control its LED each time it receives a "control LED message"
-* [Lesson 11 - IoT Sensor](Lesson_11/lesson)
+* [Lesson 11 - IoT Sensor](Lesson_11/lesson.html)
   * Make your ESP8266 publish a "light sensor reading message" every 5 seconds with the value of the light sensor
   * Make your webpage update with the latest value of the light sensor each time it receives a "light sensor reading message"
 

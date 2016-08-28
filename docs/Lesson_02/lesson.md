@@ -93,7 +93,7 @@ Before we proceed, make sure your code looks like [this](MyIoTWidget.ino)
 ### Select the proper board
 
 1. From the Arduino menu, go to Tools->Board and select your particular ESP8266 module if it's available
-  * If you are using the [Gizwits Witty](../Witty/info) or some other module which isn't listed, select ```NodeMCU 1.0 (ESP-12E Module)``` instead
+  * If you are using the [Gizwits Witty](../Witty/info.html) or some other module which isn't listed, select ```NodeMCU 1.0 (ESP-12E Module)``` instead
 2. Ensure the other settings are appropriate
   * CPU Frequency can either be 80MHz for lower power consumption or 160MHz for higher performance
   * Flash size should be set to 4M (3M SPIFFS) for most modules - this gives you 1MB for code and 3MB for filesystem space

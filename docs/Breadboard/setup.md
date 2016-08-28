@@ -13,7 +13,7 @@ An ESP8266 module by itself doesn't really interact with the physical world, but
 * A button
 * A light sensor
 
-Note: If you are using a [Gizwits Witty](../Witty/info) ESP8266 module, then you can skip this entire section - that module integrates all of the external parts necessary for this tutorial.
+Note: If you are using a [Gizwits Witty](../Witty/info.html) ESP8266 module, then you can skip this entire section - that module integrates all of the external parts necessary for this tutorial.
 
 
 ## Parts

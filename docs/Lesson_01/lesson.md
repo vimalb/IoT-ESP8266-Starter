@@ -30,7 +30,7 @@ There are a number of different USB-to-serial chips used in ESP8266 modules - de
 
 The most common additional drivers you may want to install are:
 * CH340/341 drivers - [Windows](http://www.wch.cn/download/CH341SER_ZIP.html), [OSX](http://www.wch.cn/download/CH341SER_MAC_ZIP.html)
-  * This will be required if you're using the [Gizwits Witty](../Witty/info) or most [NodeMCU](../NodeMCU/info) modules
+  * This will be required if you're using the [Gizwits Witty](../Witty/info.html) or most [NodeMCU](../NodeMCU/info.html) modules
 * FT232x drivers - [All OS](http://www.ftdichip.com/Drivers/VCP.htm)
 * CP210x drivers - [All OS](http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx)
 
