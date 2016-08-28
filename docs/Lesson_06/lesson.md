@@ -12,7 +12,7 @@ Now that we have a basic website in place, let's update it to subscribe to a MQT
 
 Javascript running within a web broswer is not capable of making a raw network connection to an MQTT broker over the standard MQTT protocol and port. Fortunately most MQTT brokers also offer a websockets-based interface which can be accessed using a javascript library like [Paho](https://eclipse.org/paho/clients/js/).
 
-Let's add [Paho](https://eclipse.org/paho/clients/js/) to our website by adding a new ```<script>``` tag right above our app javascript ```<script>`` tag. To do that, replace the contents of the ```<body>``` tag in ```index.html``` with the following:
+Let's add [Paho](https://eclipse.org/paho/clients/js/) to our website by adding a new ```<script>``` tag right above our app javascript ```<script>``` tag. To do that, replace the contents of the ```<body>``` tag in ```index.html``` with the following:
 
 ```
   <body>
