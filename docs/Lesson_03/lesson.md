@@ -7,11 +7,22 @@ title: Lesson 3
 
 ## Connect to WiFi in setup()
 
-We generally want to connect to WiFi as soon as our module starts up, so let's add the following code to the end of ```setup()```
+We generally want to connect to WiFi as soon as our module starts up, so let's replace ```setup()``` with the following code:
 
 ```
-setup() {
-  ...whatever was in setup before...
+// This function runs once on startup
+void setup() {
+  // Initialize the serial port
+  Serial.begin(115200);
+
+  // Configure light sensor pin as an input
+  pinMode(LIGHT_SENSOR, INPUT);
+
+  // Configure LED pin as an output
+  pinMode(LED, OUTPUT);
+
+  // Configure BUTTON pin as an input with a pullup
+  pinMode(BUTTON, INPUT_PULLUP);
 
   // Attempt to connect to a specific access point
   WiFi.begin("<your wifi access point name>", "<your wifi access point password>");
@@ -31,7 +42,11 @@ Note: Don't forget to substitute ```<your wifi access point name>``` and ```<you
 
 ## Test your sketch
 
-Before we proceed, make sure your code looks like [this](MyIoTWidget.ino) except with the right values substituted in.
+Before we proceed, make sure your code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
+
+* <your wifi access point name>
+* <your wifi access point password>
+
 
 ### Get your module IP address
 

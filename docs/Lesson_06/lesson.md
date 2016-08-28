@@ -91,7 +91,7 @@ Note: You should remember to replace ```<your_random_topic_root>``` with the exa
 
 Each time we receive a message from the MQTT broker, we want to take the payload and append it somewhere on our web page HTML.
 
-Let's create a function named ```myMessageArrived()``` and then tell the mqtt client to run that function each time a message arrives. 
+Let's create a function named ```myMessageArrived``` and then tell the mqtt client to run that function each time a message arrives. 
 
 To does this, add the following code to the bottom of ```app.js```:
 
@@ -114,9 +114,19 @@ MQTT_CLIENT.onMessageArrived = myMessageArrived;
 
 ## Test your webpage
 
-Before we proceed, make sure your index.html looks like [this](index.html) and your app.js looks like [this](app.js).
+Before we proceed, make sure your index.html looks like [this](index.html) and your app.js looks like [this](app.js) except with the right values for the following substituted in:
 
-Close any open copies of your mini website that you may have, and then double-click on ```index.html``` to open it up in a new browser window or tab. Wait a couple seconds, and you should start to see incoming message payloads sent by your ESP8266 module running your Arduino code: 
+* <your_random_topic_root>
+
+Also make sure your Arduino code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
+
+* <your wifi access point name>
+* <your wifi access point password>
+* <your_random_device_client_id>
+* <your_random_topic_root>
+
+
+Close any open copies of your web page that you may have, and then double-click on ```index.html``` to open it up in a new browser window or tab. Wait a couple seconds, and you should start to see incoming message payloads sent by your ESP8266 module running your Arduino code: 
 
 ![Javascript MQTT Sub](js_mqtt_sub.png "Javascript MQTT Sub")
 

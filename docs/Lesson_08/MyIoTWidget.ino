@@ -38,6 +38,18 @@ void setup() {
   Serial.println(WiFi.localIP());
 }
 
+// This function handles received messages
+void myMessageArrived(char* topic, byte* payload, unsigned int length) {
+  // Convert the message payload from bytes to a string
+  String message = "";
+  for (unsigned int i=0; i< length; i++) {
+    message = message + (char)payload[i];
+  }
+   
+  // Print the message to the serial port
+  Serial.println(message);
+}
+
 // This function connects to the MQTT broker
 void reconnect() {
   // Set our MQTT broker address and port
@@ -55,6 +67,12 @@ void reconnect() {
   }
 
   Serial.println("MQTT connected");
+
+  // Subscribe to the topic where our web page is publishing messages
+  MQTT_CLIENT.subscribe("<your_random_topic_root>/iot_tutorial/from_webpage");
+
+  // Set the message received callback
+  MQTT_CLIENT.setCallback(myMessageArrived);
 }
 
 // This function runs over and over again in a continuous loop
@@ -71,4 +89,7 @@ void loop() {
 
   // Wait five seconds
   delay(5000);
+
+  // Check for incoming MQTT messages
+  MQTT_CLIENT.loop();
 }

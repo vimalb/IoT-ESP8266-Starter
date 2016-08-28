@@ -6,6 +6,7 @@ WiFiClient WIFI_CLIENT;
 #define LED 15
 #define BUTTON 4
 
+// This function runs once on startup
 void setup() {
   // Initialize the serial port
   Serial.begin(115200);
@@ -20,6 +21,7 @@ void setup() {
   pinMode(BUTTON, INPUT_PULLUP);
 }
 
+// This function runs over and over again in a continuous loop
 void loop() {
   // turn the LED on (HIGH is the voltage level)
   digitalWrite(LED, HIGH);

@@ -108,7 +108,7 @@ Note that this button will try to run the javascript function ```myButtonWasClic
 
 ```
 function myButtonWasClicked() {
-    alert("The button was clicked!");
+  alert("The button was clicked!");
 }
 ```
 
@@ -149,8 +149,8 @@ Now let's change our button to update the ```<div>``` text instead of showing an
 ```
 // This is the function which handles button clicks
 function myButtonWasClicked() {
-    // Select the tag with id="updateMe" and set its inner content
-    $("#updateMe").text("The text is updated!");
+  // Select the tag with id="updateMe" and set its inner content
+  $("#updateMe").text("The text is updated!");
 }
 ```
 
@@ -163,7 +163,7 @@ Now if you reopen or reload index.html and click the button labeled ```Press me!
 
 Before we proceed, make sure your index.html looks like [this](index.html) and your app.js looks like [this](app.js).
 
-Close any open copies of your mini website that you may have, and then double-click on ```index.html``` to open it up in a new browser window or tab. If you click the button labeled ```Press me!```, you should modify the page to look like: 
+Close any open copies of your web page that you may have, and then double-click on ```index.html``` to open it up in a new browser window or tab. If you click the button labeled ```Press me!```, you should modify the page to look like: 
 
 ![Javascript Div Update](js_div_update.png "Javascript Div Update")
 

@@ -81,6 +81,7 @@ Because we may have to connect and reconnect to our MQTT broker multiple times, 
 Between the ```setup()``` and ```loop()``` functions, add the following new function:
 
 ```
+// This function connects to the MQTT broker
 void reconnect() {
   // Set our MQTT broker address and port
   MQTT_CLIENT.setServer("iot.eclipse.org", 1883);
@@ -113,6 +114,7 @@ Our old ```loop()``` simply blinked an LED, but now we need it to be a bit smart
 Replace the existing ```loop()``` function with the following:
 
 ```
+// This function runs over and over again in a continuous loop
 void loop() {
 
   // Check if we're connected to the MQTT broker
@@ -134,8 +136,14 @@ Note: Be sure to replace ```<your_random_topic_root>``` with a unique randomly c
 
 ## Test your sketch
 
-Before we proceed, make sure your code looks like [this](MyIoTWidget.ino) except with the right values substituted in.
+Before we proceed, make sure your code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
 
-Download your sketch and open up the serial monitor - you should see log messages once you have connected successfully to the MQTT broker. 
+* <your wifi access point name>
+* <your wifi access point password>
+* <your_random_device_client_id>
+* <your_random_topic_root>
+
+
+Download your sketch and open up the serial monitor - you should see log messages once you have connected successfully to the MQTT broker. Also your ESP8266 module should be publishing a message to the MQTT broker every couple seconds on the topic ```<your_random_topic_root>/iot_tutorial/from_esp8266```.
 
 ![Serial Output](serial_output.png "Serial Output")

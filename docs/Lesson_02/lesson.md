@@ -45,6 +45,7 @@ Here we have included a ```#define``` for each of the pins that we will use on t
 The code within the curly braces of the ```setup()``` function is run once every time the ESP8266 starts up. Let's change this function to the following: 
 
 ```
+// This function runs once on startup
 void setup() {
   // Initialize the serial port
   Serial.begin(115200);
@@ -65,6 +66,7 @@ void setup() {
 The code within the curly braces of the ```loop()``` function is run once in a never-ending loop. let's change this function to the following:
 
 ```
+// This function runs over and over again in a continuous loop
 void loop() {
   // Turn the LED on (HIGH is the voltage level)
   digitalWrite(LED, HIGH);

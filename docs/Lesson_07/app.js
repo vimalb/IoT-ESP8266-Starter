@@ -9,8 +9,14 @@ MQTT_CLIENT.connect({ onSuccess: myClientConnected });
 
 // This is the function which handles button clicks
 function myButtonWasClicked() {
-  // Select the tag with id="updateMe" and set its inner content
-  $("#updateMe").text("The text is updated!");
+  // create a new MQTT message with a specific payload
+  var mqttMessage = new Paho.MQTT.Message("Hello from website");
+
+  // Set the topic it should be published to
+  mqttMessage.destinationName = "<your_random_topic_root>/iot_tutorial/from_webpage";
+
+  // Publish the message
+  MQTT_CLIENT.send(mqttMessage);
 }
 
 // This is the function which handles subscribing to topics after a connection is made
