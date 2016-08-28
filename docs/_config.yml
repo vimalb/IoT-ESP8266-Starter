@@ -16,5 +16,5 @@ github_username:  vimalb
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
