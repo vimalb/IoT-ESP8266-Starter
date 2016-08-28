@@ -43,19 +43,19 @@ Note: Official documentation for Arduino ESP8266 support can be found [here](htt
 
 ### Add the ESP8266 Board Manager URL
 
-* In the Arduino menu, go to File->Preferences on Windows and Arduino->Preferences on OSX
-* Enter ```http://arduino.esp8266.com/stable/package_esp8266com_index.json``` into *Additional Board Manager URLs* field
-* Hit ```OK``` so save your preferences
+1. In the Arduino menu, go to File->Preferences on Windows and Arduino->Preferences on OSX
+2. Enter ```http://arduino.esp8266.com/stable/package_esp8266com_index.json``` into *Additional Board Manager URLs* field
+3. Hit ```OK``` so save your preferences
 
 ![Arduino Preferences](arduino_preferences.png "Arduino Preferences")
 
 ### Install the ESP8266 Platform
 
-* In the Arduino menu, go to Tools->Board->Boards Manager
-* Search for ```esp8266```
-* Click on the esp8266 entry, select the latest version, and hit ```Install```
+1. In the Arduino menu, go to Tools->Board->Boards Manager
+2. Search for ```esp8266```
+3. Click on the esp8266 entry, select the latest version, and hit ```Install```
   * This may take a couple minutes since it needs to download and install all of the ESP8266 tools
-* Hit ```Close``` once you are done
+4. Hit ```Close``` once you are done
 
 ![Arduino Boards Manager](arduino_boards_manager.png "Arduino Boards Manager")
 
@@ -64,15 +64,15 @@ Note: Official documentation for Arduino ESP8266 support can be found [here](htt
 
 Arduino libraries are code other members of the Arduino community have written, packaged, and released for you to use. One of the strengths of the Arduino community is the number and quality of libraries which make it simple and fast to add a lot of complex capabilities to your code. We will use the "Library Manager" in the Arduino IDE to install a couple libraries necessary for our tutorial.
 
-* In the Arduino menu, go to Sketch->Include Library->Manage Libraries
-* Search for and install the latest versions of the following libraries:
+1. In the Arduino menu, go to Sketch->Include Library->Manage Libraries
+2. Search for and install the latest versions of the following libraries:
   * WiFiManager
     * This library gives you the classic IoT "connect to a special access point and enter in your WiFi credentials" setup experience
     * [Official documentation](https://github.com/tzapu/WiFiManager)
   * PubSubClient
     * This library supports publishing and subscribing to an MQTT server
     * [Official documentation](http://pubsubclient.knolleary.net/)
-* Hit ```Close``` once you are done
+3. Hit ```Close``` once you are done
 
 ![Arduino Library Manager WifiManager](arduino_library_manager_wifimanager.png "Arduino Library Manager WifiManager")
 

@@ -7,8 +7,8 @@ title: Lesson 2
 
 ## Create a new MyIoTWidget Arduino sketch
 
-* Open Arduino and make sure you see a default sketch
-* Go to File->Save As and save it as ```MyIotWidget``` in a convenient location
+1. Open Arduino and make sure you see a default sketch
+2. Go to File->Save As and save it as ```MyIoTWidget``` in a convenient location
 
 ## Add some ```#include```
 
@@ -91,9 +91,9 @@ Before we proceed, make sure your code looks like [this](MyIoTWidget.ino)
 
 ### Select the proper board
 
-* From the Arduino menu, go to Tools->Board and select your particular ESP8266 module if it's available
+1. From the Arduino menu, go to Tools->Board and select your particular ESP8266 module if it's available
   * If you are using the [Gizwits Witty](../Witty/info) or some other module which isn't listed, select ```NodeMCU 1.0 (ESP-12E Module)``` instead
-* Ensure the other settings are appropriate
+2. Ensure the other settings are appropriate
   * CPU Frequency can either be 80MHz for lower power consumption or 160MHz for higher performance
   * Flash size should be set to 4M (3M SPIFFS) for most modules - this gives you 1MB for code and 3MB for filesystem space
   * Upload Speed should be set to 115200
@@ -105,38 +105,39 @@ Note: You generally only have to set this up once each time you open a new sketc
 
 ### Verify your sketch
 
-* In the upper left, click on the checkmark icon to begin compiling your sketch
-* Wait a couple seconds as your sketch is compiled
-* Look at the logs at the bottom and make sure no red errors or warnings are reported
+1. In the upper left, click on the checkmark icon to begin compiling your sketch
+2. Wait a couple seconds as your sketch is compiled
+3. Look at the logs at the bottom and make sure no red errors or warnings are reported
 
 Note: This step is entirely optional - your sketch is recompiled and checked for errors each time it is downloaded. This is just a way to get an preview of any errors without having to download.
 
 ![Verify Sketch](verify_sketch.png "Verify Sketch")
 
-### Upload your sketch to your ESP8266 module
+### Set your ESP8266 module serial port
+
+1. Plug in your ESP8266 module into your computer
+  * If this is the first time plugging in your ESP8266 module on Windows, please wait a minute or two until drivers finish installing
+2. Go to the Arduino menu Tools->Port and select the appropriate port corresponding to your module
+  * On Windows, it will start with "COM", eg: ```COM4```
+  * On OSX, it will start with "/dev/wchusbserial", eg: ```/dev/wchusbserialfd120```
+  * If you are not sure with port to pick, unplug your module, note down which ports are available, plug in your module, and then see which port was added - that is the one you should choose.
+
+Note: You generally only have to do this once each time you open a new sketch. Arduino should remember the port selection even when you unplug and replug the device, but it's always good to double-check
+
+![Download Port](download_port.png "Download Port")
+
+### Upload your sketch
 
 For the ESP8266 modules, this is generally the trickiest part - be sure to follow these directions in the exact order they are listed, otherwise it will not work.
 
 1. Make sure your ESP8266 module is unplugged from your computer
-
 2. Press and hold the button marked ```Flash``` on your ESP8266 module *while* simultaneously plugging it into your computer over USB
   * This puts your ESP8266 module into download mode and prepares it to receive a new sketch
   * Once you have plugged in your ESP8266 module into your computer, wait a couple seconds and release the ```Flash``` button - the module will remain in download mode until code is downloaded to it or it is unplugged
-
-3. Go to the Arduino menu Tools->Port and select the appropriate port corresponding to your module
-  * On Windows, it will start with "COM", eg: ```COM4```
-  * On OSX, it will start with "/dev/wchusbserial", eg: ```/dev/wchusbserialfd120```
-  * If you are not sure with port to pick, unplug your module, note down which ports are available, plug in your module, and then see which port was added - that is the one you should choose. Remember when plugging in to hold down the ```Flash``` button
-  * If this is the first time plugging in your ESP8266 module on Windows, please wait a minute or two until drivers finish installing, and then look for the port again
-
-![Download Port](download_port.png "Download Port")
-
-4. In the upper left, click on the arrow icon to compile and upload your sketch
+3. In the upper left, click on the arrow icon to compile and upload your sketch
   * This can take 20-30 seconds, so be patient
   * When it is done you will see a "Done uploading" message and your sketch will automatically start running
   * If you see any errors, first verify your sketch to make sure it's not a problem with your code and then try following this entire upload procedure again
-
-Note: Arduino generally remembers the port selection even when you unplug and replug the device, but it's always good to double-check it
 
 ![Upload Sketch](upload_sketch.png "Upload Sketch")
 
@@ -147,9 +148,9 @@ This is a very simple sketch, so it's easy to see if it's working or not.
 
 * Make sure the LED is blinking
 * Check the serial console for messages
-  * From the Arduino menu, select Tools->Serial Monitor
-  * Change the data rate in the bottom right to ```115200```
-  * Look for ```Finsihed loop``` messages appearing every two seconds
+  1. From the Arduino menu, select Tools->Serial Monitor
+  2. Change the data rate in the bottom right to ```115200```
+  3. Look for ```Finished loop``` messages appearing every two seconds
 
 ![Serial Monitor](serial_monitor.png "Serial Monitor")
 
