@@ -31,7 +31,7 @@ Note: Don't forget to substitute ```<your wifi access point name>``` and ```<you
 
 ## Test your sketch
 
-Before we proceed, make sure your code looks like [this](MyIoTWidget.ino) except with the right value substituted in.
+Before we proceed, make sure your code looks like [this](MyIoTWidget.ino) except with the right values substituted in.
 
 ### Get your module IP address
 
@@ -69,15 +69,15 @@ From a networking point of view, your ESP8266 module is the same as your desktop
 
 If you want a deep understanding of how the internet works, learn about the basic protocols behind it:
 
-* Ethernet - physical layer protocol
-* ARP - runs on top of Ethernet
-* IP - runs on top of Ethernet
-* TCP - runs on top of IP
-* DNS - runs on top of IP
-* ICMP - runs on top of IP
-* HTTP - runs on top of TCP
-* SMTP - runs on top of TCP
-* MQTT - runs on top of TCP
+* [Ethernet](https://en.wikipedia.org/wiki/Ethernet) - physical layer protocol
+* [ARP](https://en.wikipedia.org/wiki/Address_Resolution_Protocol) - runs on top of Ethernet
+* [IP](https://en.wikipedia.org/wiki/Internet_Protocol) - runs on top of Ethernet
+* [TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) - runs on top of IP
+* [DNS](https://en.wikipedia.org/wiki/Domain_Name_System) - runs on top of IP
+* [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol) - runs on top of IP
+* [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) - runs on top of TCP
+* [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) - runs on top of TCP
+* [MQTT](https://en.wikipedia.org/wiki/MQTT) - runs on top of TCP
 
 
 
