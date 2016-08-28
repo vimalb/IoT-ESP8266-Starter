@@ -18,7 +18,7 @@ You can read this analog input pin using ```analogRead(LIGHT_SENSOR)```. The ret
 
 ### Take a light sensor reading and send a message from the ESP8266 module
 
-We probably only want to send light sensor readings every five seconds or so, but our ```main()``` loop is starting to do a lot of things and if we add a ````delay(5000)``` in there to limit our sensor reading rate, we might also delay other important processes such as checking for button presses or checking for incoming messages.
+We probably only want to send light sensor readings every five seconds or so, but our ```main()``` loop is starting to do a lot of things and if we add a ```delay(5000)``` in there to limit our sensor reading rate, we might also delay other important processes such as checking for button presses or checking for incoming messages.
 
 Instead let's track the time when we took a sensor reading, and if the current time is greater than 5 seconds from the last time we took a reading, let's take a new reading and update the timestamp. 
 
