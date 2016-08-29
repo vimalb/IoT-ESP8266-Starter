@@ -3,46 +3,46 @@ layout: page
 title: Lesson 2 - ESP8266 Hello World
 ---
 
-## Create a new MyIoTWidget Arduino sketch
+## **Create a new Arduino sketch**
 
 1. Open Arduino and make sure you see a default sketch
 2. Go to File->Save As and save it as ```MyIoTWidget``` in a convenient location
 
-## Add some #includes
+## **Add some #includes**
 
 At the top of your sketch, add the following code:
 
-```
+{% highlight cpp %}
 // Base ESP8266
 #include <ESP8266WiFi.h>
 WiFiClient WIFI_CLIENT;
-```
+{% endhighlight %}
 
 This will "include" a reference to ESP8266-specific libraries and constants which are necessary for your code to run on an ESP8266. It will also create a global WifiClient which other parts of your code may use to access the network.
 
 Note: Anything that comes after ```//``` is a comment - it will be ignored by Arduino but is helpful to keep around so that you remember what your code is supposed to do.
 
 
-## Add some #defines
+## **Add some #defines**
 
 In the Arduino language, you can define one name to mean something else using ```#define```. This is typically used to make your code easier to read. 
 
 Right after the ```#include``` lines you added earlier, but before ```setup()```, add the following code:
 
-```
+{% highlight cpp %}
 #define LIGHT_SENSOR A0
 #define LED 15
 #define BUTTON 4
-```
+{% endhighlight %}
 
 Here we have included a ```#define``` for each of the pins that we will use on the ESP8266 module - this way we can refer to them by the names we have given above rather than having to remember their pin numbers.
 
 
-## Update setup()
+## **Update setup()**
 
 The code within the curly braces of the ```setup()``` function is run once every time the ESP8266 starts up. Let's change this function to the following: 
 
-```
+{% highlight cpp %}
 // This function runs once on startup
 void setup() {
   // Initialize the serial port
@@ -57,13 +57,13 @@ void setup() {
   // Configure BUTTON pin as an input with a pullup
   pinMode(BUTTON, INPUT_PULLUP);
 }
-```
+{% endhighlight %}
 
-## Update loop()
+## **Update loop()**
 
 The code within the curly braces of the ```loop()``` function is run once in a never-ending loop. let's change this function to the following:
 
-```
+{% highlight cpp %}
 // This function runs over and over again in a continuous loop
 void loop() {
   // Turn the LED on (HIGH is the voltage level)
@@ -81,12 +81,12 @@ void loop() {
   // Send a message over the serial port
   Serial.println("Finished loop");
 }
-```
+{% endhighlight %}
 
 This is the classic "blink an LED" program taken straight from the Arduino examples, slightly modified to work with the ESP8266 and also exercise the Serial port. 
 
 
-## Run your sketch
+## **Run your sketch**
 
 Before we proceed, make sure your code looks like [this](MyIoTWidget.ino)
 
@@ -143,7 +143,7 @@ For the ESP8266 modules, this is generally the trickiest part - be sure to follo
 ![Upload Sketch](upload_sketch.png "Upload Sketch")
 
 
-## Test your sketch
+## **Test your sketch**
 
 This is a very simple sketch, so it's easy to see if it's working or not.
 

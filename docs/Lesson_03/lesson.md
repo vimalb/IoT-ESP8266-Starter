@@ -3,11 +3,11 @@ layout: page
 title: Lesson 3 - ESP8266 WiFi Setup
 ---
 
-## Connect to WiFi in setup()
+## **Connect to WiFi in setup()**
 
 We generally want to connect to WiFi as soon as our module starts up, so let's replace ```setup()``` with the following code:
 
-```
+{% highlight cpp %}
 // This function runs once on startup
 void setup() {
   // Initialize the serial port
@@ -34,11 +34,11 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 }
-```
+{% endhighlight %}
 
 Note: Don't forget to substitute ```<your wifi access point name>``` and ```<your wifi access point password>``` with your actual WiFi network name and password otherwise this won't work.
 
-## Test your sketch
+## **Test your sketch**
 
 Before we proceed, make sure your code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
 
@@ -76,7 +76,7 @@ One of the simplest protocols in networking is ICMP Echo request and response, m
 Note: Most devices connected to a network, including your ESP8266 module, will respond to ping requests.
 
 
-## Learn More
+## **Learn more**
 
 From a networking point of view, your ESP8266 module is the same as your desktop or laptop or phone or any other device connected to the internet. The basic concept behind "Internet of Things" is taking the same networking protocols and infrastructure which allow your computing devices to communicate over the internet, and reusing it to let your microcontrollers and embedded modules communicate over the internet.
 

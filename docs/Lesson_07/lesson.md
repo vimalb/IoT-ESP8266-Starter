@@ -5,13 +5,13 @@ title: Lesson 7 - Javascript MQTT Publish
 
 Now that our web page is subscribing to MQTT topics and receiving messages from our ESP8266 module, let's make it also publish messages to a different topic whiich our ESP8266 module can subscribe to. This way we get two-way communication between our web page and our ESP8266 module. 
 
-## Send a message on a button push
+## **Send a message on a button push**
 
 We already set up our web page to run the ```myButtonWasClicked()``` javascript function every time the ```Press me!``` button is pressed. Now let's change that function so that it publishes a message to an MQTT topic instead. 
 
 To do this, replace the existing ```myButtonWasClicked()``` javascript function in ```app.js``` with the following:
 
-```
+{% highlight javascript %}
 // This is the function which handles button clicks
 function myButtonWasClicked() {
   // create a new MQTT message with a specific payload
@@ -23,12 +23,12 @@ function myButtonWasClicked() {
   // Publish the message
   MQTT_CLIENT.send(mqttMessage);
 }
-```
+{% endhighlight %}
 
 Note: Be sure to replace ```<your_random_topic_root>``` with the exact same value that you used in your Arduino code and elsewhere in your web page. In theory we could choose any new topic name, however to keep things simple we will reuse the same random root topic and just change the path.
 
 
-## Test your webpage
+## **Test your webpage**
 
 Before we proceed, make sure your index.html looks like [this](index.html) and your app.js looks like [this](app.js) except with the right values for the following substituted in:
 

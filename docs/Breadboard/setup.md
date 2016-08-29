@@ -3,7 +3,7 @@ layout: page
 title: Setup Guide
 ---
 
-## Intro
+## **Intro**
 
 An ESP8266 module by itself doesn't really interact with the physical world, but we can change that pretty easily by hooking it up to:
 
@@ -14,7 +14,7 @@ An ESP8266 module by itself doesn't really interact with the physical world, but
 Note: If you are using a [Gizwits Witty](../Witty/info.html) ESP8266 module, then you can skip this entire section - that module integrates all of the external parts necessary for this tutorial.
 
 
-## Parts
+## **Parts**
 
 In addition to your ESP8266 module, you will need the following:
 
@@ -33,7 +33,7 @@ In addition to your ESP8266 module, you will need the following:
 
 These parts are all super cheap, so it never hurts to have them laying around. If you don't already have these parts, I recommend buying a cheap breadboard and component starter kit like [this $13 kit from Amazon](https://www.amazon.com/Elegoo-EL-CK-002-Electronic-Breadboard-Potentiometer/dp/B01ERP6WL4)
 
-## ESP8266 Pins
+## **ESP8266 Pins**
   
 The naming of pins for ESP8266 can be a bit confusing - there is the name of the pin within Arduino, the name of the pin inside the ESP8266 itself, and the name of the pin as labeled on the module. For the purposes of our tutorial, here is the mapping between the Arduino pin name, the ESP8266 pin name, and a couple different module pin names
 
@@ -42,14 +42,15 @@ The naming of pins for ESP8266 can be a bit confusing - there is the name of the
 |      A0     |      A0     |    ADC    |      A0     |         A0         |           ADC          |        A        |
 |      4      |    GPIO4    |   GPIO4   |      D2     |         D2         |            4           |        #4       |
 |      15     |    GPIO15   |   GPIO15  |      D8     |         D8         |           15           |        15       |
+{:.mbtablestyle}
 
-## Circuit Diagram
+## **Circuit Diagram**
 
 This is the circuit diagram for the parts we're using in this tutorial. It assumes you're using a NodeMCU module and uses the NodeMCU module pin names. If you're using a different module, substitute pin names and locations as necessary. 
 
 ![Circuit Diagram](iot-starter-tutorial_schem.png "Circuit Diagram")
 
-## Breadboard Diagram
+## **Breadboard Diagram**
 
 If you don't know what to do with a circuit diagram, here's an equivalent breadboard diagram showing you how the different parts should be wired together. It also assumes you're using a NodeMCU module, so if you're using a different module, substitute pin names and locations as necessary. 
 

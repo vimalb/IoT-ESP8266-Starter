@@ -428,3 +428,16 @@ article {
         }
     }
 }
+
+
+.mbtablestyle {
+        border-collapse: collapse;
+
+   > table, td, th {
+        border: 1px solid black;
+        }
+}
+
+figure.highlight > pre {
+    padding: 5px;
+}

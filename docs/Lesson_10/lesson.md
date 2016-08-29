@@ -9,18 +9,18 @@ Specifically let's add two buttons to our web page, one which publishes a "turn 
 
 Whether you are using the LED built into the [Gizwits Witty](../Witty/info.html) or using the [breadboard setup](../Breadboard/setup.md), the LED is wired the same way and you can turn it on by ```digitalWrite(LED, HIGH)``` and off by ```digitalWrite(LED, LOW)```.
 
-### Add LED on and off buttons to the web page
+## **Add LED on and off buttons to web page**
 
 First let's add the buttons themselves to the HTML. Immediately after the current ```<button>``` tag in ```index.html```, add the following:
 
-```
+{% highlight html %}
       <button onClick="turnOnLED()">Turn LED on</button>
       <button onClick="turnOffLED()">Turn LED off</button>
-```
+{% endhighlight %}
 
 Now let's add the corresponding functions to the javascript. Add the following code to the end of ```app.js```:
 
-```
+{% highlight javascript %}
 // This function handles "Turn LED on" button clicks
 function turnOnLED() {
   // create a new MQTT message with a specific payload
@@ -44,18 +44,18 @@ function turnOffLED() {
   // Publish the message
   MQTT_CLIENT.send(mqttMessage);
 }
-```
+{% endhighlight %}
 
 Note: You should remember to replace ```<your_random_topic_root>``` with the exact same value that you used in elsewhere in your Arduino code and web page. 
 
 
-### Check for "turn led on" and "turn led off" messages and set LED appropriately
+## **Set LED based on "turn led on/off" messages**
 
 Let's add some logic inside the ```myMessageArrived``` function in your ESP8266 Arduino code to check if the message is either "turn led on" or "turn led off" and set the LED appropriately.
 
 To do this, insert the following lines of code at the very end of the ```myMessageArrived``` function:
 
-```
+{% highlight cpp %}
   // Check if message is "turn led on"
   if(message == "turn led on") {
     // Turn the LED on
@@ -67,10 +67,10 @@ To do this, insert the following lines of code at the very end of the ```myMessa
     // Turn the LED off
     digitalWrite(LED, LOW);
   }
-```
+{% endhighlight %}
 
 
-## Test your sketch and web page
+## **Test your sketch and web page**
 
 Before we proceed, make sure your Arduino code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
 

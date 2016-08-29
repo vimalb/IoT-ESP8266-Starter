@@ -6,13 +6,13 @@ title: Lesson 6 - Javascript MQTT Subscribe
 Now that we have a basic website in place, let's update it to subscribe to a MQTT topic and display incoming messages.
 
 
-## Add an MQTT library
+## **Add an MQTT library**
 
 Javascript running within a web broswer is not capable of making a raw network connection to an MQTT broker over the standard MQTT protocol and port. Fortunately most MQTT brokers also offer a websockets-based interface which can be accessed using a javascript library like [Paho](https://eclipse.org/paho/clients/js/).
 
 Let's add [Paho](https://eclipse.org/paho/clients/js/) to our website by adding a new ```<script>``` tag right above our app javascript ```<script>``` tag. To do that, replace the contents of the ```<body>``` tag in ```index.html``` with the following:
 
-```
+{% highlight html %}
   <body>
     <h1>Hello World Webpage</h1>
 
@@ -34,18 +34,18 @@ Let's add [Paho](https://eclipse.org/paho/clients/js/) to our website by adding 
     <!-- our javascript -->
     <script src="app.js"></script>
   </body>
-```
+{% endhighlight %}
 
-## Display messages from an MQTT topic
+## **Display messages from an MQTT topic**
 
 ### Generate a new unique client id
 
 Since each client which connects to an MQTT broker should use a unique identifier and since each windw wher eyour web page is open counts as a unique "client", let's randomly generate a new MQTT client id by placing the following line at the top of our ```app.js```:
 
-```
+{% highlight javascript %}
 // Generate a new random MQTT client id on each page load
 var MQTT_CLIENT_ID = "iot_web_"+Math.floor((1 + Math.random()) * 0x10000000000).toString(16);
-```
+{% endhighlight %}
 
 
 ### Connect to an MQTT Broker
@@ -58,13 +58,13 @@ Now that we have a new client id, let's connect to an MQTT broker using its webs
 
 In your ```app.js``` immediately after you generate the client id, add the following:
 
-```
+{% highlight javascript %}
 // Create a MQTT client instance
 var MQTT_CLIENT = new Paho.MQTT.Client("iot.eclipse.org", 80, "/ws", MQTT_CLIENT_ID);
 
 // Tell the client instance to connect to the MQTT broker
 MQTT_CLIENT.connect({ onSuccess: myClientConnected });
-```
+{% endhighlight %}
 
 Note: Once the MQTT client successfully connects to the MQTT broker, it will attempt to run the function ```myClientConnected()```. This hasn't yet been defined, but in javascript it's okay reference a function and then define it later, as long as you don't try to *use* the reference until after it has been defined. This feature of the javascript language is known as [hoisting](http://www.w3schools.com/js/js_hoisting.asp)
 
@@ -75,12 +75,12 @@ As noted above, we need to create a function named ```myClientConnected()``` whi
 
 To do this, add the following code to the bottom of ```app.js```:
 
-```
+{% highlight javascript %}
 // This is the function which handles subscribing to topics after a connection is made
 function myClientConnected() {
   MQTT_CLIENT.subscribe("<your_random_topic_root>/iot_tutorial/from_esp8266");
 }
-```
+{% endhighlight %}
 
 Note: You should remember to replace ```<your_random_topic_root>``` with the exact same value that you used in your Arduino code where you are publishing messages. 
 
@@ -93,7 +93,7 @@ Let's create a function named ```myMessageArrived``` and then tell the mqtt clie
 
 To does this, add the following code to the bottom of ```app.js```:
 
-```
+{% highlight javascript %}
 // This is the function which handles received messages
 function myMessageArrived(message) {
   // Get the payload
@@ -108,9 +108,9 @@ function myMessageArrived(message) {
 
 // Tell MQTT_CLIENT to call myMessageArrived(message) each time a new message arrives
 MQTT_CLIENT.onMessageArrived = myMessageArrived;
-```
+{% endhighlight %}
 
-## Test your webpage
+## **Test your webpage**
 
 Before we proceed, make sure your index.html looks like [this](index.html) and your app.js looks like [this](app.js) except with the right values for the following substituted in:
 

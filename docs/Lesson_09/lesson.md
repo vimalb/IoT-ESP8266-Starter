@@ -14,7 +14,7 @@ When the button is not pressed, the input pin is pulled to a +3.3V ```HIGH``` vo
 When the button is pressed, the input pin is connects directly to ground though the button, so ```digitalRead(BUTTON)``` will return ```LOW```. 
 
 
-## Detect a button press and send a message on the ESP8266 module
+## **Detect a button press on the ESP8266 module**
 
 To detect a button press, we check if ```digitalRead(BUTTON)``` returns ```LOW```. To prevent a long press from being detected as multiple button presses, we wait until the button is released (```digitalRead(BUTTON)``` returns ```HIGH```) and then process the button press.
 
@@ -22,7 +22,7 @@ In our case, we want the button press to send a "button pushed" message to our w
 
 To do this, replace the the ```loop()``` function in your ESP8266 Arduino code with the following:
 
-```
+{% highlight cpp %}
 // This function runs over and over again in a continuous loop
 void loop() {
 
@@ -48,25 +48,25 @@ void loop() {
   // Check for incoming MQTT messages
   MQTT_CLIENT.loop();
 }
-```
+{% endhighlight %}
 
 Note: You should remember to replace ```<your_random_topic_root>``` with the exact same value that you used in elsewhere in your Arduino code and web page. 
 
-### Check for "button pushed" messages and show an alert on the web page
+## **Show a web page alert on "button pushed"**
 
 Our web page is already receiving the all messages and displaying them, but let's make it do something special like show an alert if the specific "button pushed" message is received.
 
 To do this, add the following snippet of code to the end of the ```myMessageArrived(message)``` function in ```app.js```:
 
-```
+{% highlight javascript %}
   // Check for "button pushed" messages
   if(messageBody == "button pushed") {
     // Show an alert if one is received
     alert("The button was pushed!");
   }
-```
+{% endhighlight %}
 
-### Test your sketch and web page
+## **Test your sketch and web page**
 
 Before we proceed, make sure your Arduino code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
 

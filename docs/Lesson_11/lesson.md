@@ -14,7 +14,7 @@ When it is dark, the CDS cell has a resistance much higher than the fixed resist
 You can read this analog input pin using ```analogRead(LIGHT_SENSOR)```. The returned value will be between 0 and 1024, where 0 corresponds to 0V and a dark environment while 1024 corresponds to 1V and a bright environment. Be careful not to let the voltage exceed 1V on the analog input pin, or you might damage the ESP8266 module. 
 
 
-### Take a light sensor reading and send a message from the ESP8266 module
+## **Read the light sensor reading and send a message**
 
 We probably only want to send light sensor readings every five seconds or so, but our ```main()``` loop is starting to do a lot of things and if we add a ```delay(5000)``` in there to limit our sensor reading rate, we might also delay other important processes such as checking for button presses or checking for incoming messages.
 
@@ -22,14 +22,14 @@ Instead let's track the time when we took a sensor reading, and if the current t
 
 To do this, first declare a global variable for tracking the last time a sensor reading was taken by adding the following lines to the ESP8266 Arduino code immediately before the ```setup()``` function:
 
-```
+{% highlight cpp %}
 // Tracks the last time a sensor reading was taken
 long lastSensorReading = 0;
-```
+{% endhighlight %}
 
 Then let's insert the following lines of code at the very end of the ```loop()``` function:
 
-```
+{% highlight cpp %}
   // Check if it has been more than five seconds since last light sensor reading
   if((millis() - lastSensorReading) > 5000) {
     // Take a new light sensor reading
@@ -45,35 +45,35 @@ Then let's insert the following lines of code at the very end of the ```loop()``
     // Update last sensor reading to current time
     lastSensorReading = millis();
   }
-```
+{% endhighlight %}
 
 Note: You should remember to replace ```<your_random_topic_root>``` with the exact same value that you used in elsewhere in your Arduino code and web page. 
 
 
-### Check for "light sensor" messages and display the latest value on the web page
+## **Display the latest "light sensor" reading**
 
 Our web page is already receiving the all messages and displaying them, but let's make it track the latest value of the light sensor in a specific place.
 
 First let's add a placeholder to display the value in the HTML. Immediately before the ```<div id="updateMe">``` tag in ```index.html```, add the following:
 
-```
+{% highlight html %}
     <!-- this is where the light sensor reading will appear -->
     <div id="lightSensorValue">
     </div>
-```
+{% endhighlight %}
 
 
 Now let's check for "light sensor" messages and update that placeholder. To do this, add the following snippet of code to the end of the ```myMessageArrived(message)``` function:
 
-```
+{% highlight javascript %}
   // Check for "light sensor" messages
   if(messageBody.startsWith("light sensor")) {
     // Update the id=lightSensorValue placeholder
     $("#lightSensorValue").text("latest "+messageBody);
   }
-```
+{% endhighlight %}
 
-## Test your sketch and web page
+## **Test your sketch and web page**
 
 Before we proceed, make sure your Arduino code looks like [this](MyIoTWidget.ino) except with the right values for the following substituted in:
 

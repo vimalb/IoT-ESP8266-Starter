@@ -8,7 +8,7 @@ Just as you were getting comfortable with Arduino, let's switch over to making a
 There are thousands of good resources online for learning basic HTML, CSS, and Javascript, and there are thousands of tools, utilities, libraries, and frameworks to choose from.
 
 
-## Create an index.html web page
+## **Create an index.html web page**
 
 For a good introduction to HTML syntax and some basic tags, check out the [w3schools HTML tutorial](http://www.w3schools.com/html/default.asp)
 
@@ -18,7 +18,7 @@ For this tutorial, we'll be making an exteremly simple HTML page.
 2. Create a file named ```index.html``` and open that file in a text editor
 3. Paste the following content into that file
 
-```
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 
@@ -32,14 +32,14 @@ For this tutorial, we'll be making an exteremly simple HTML page.
   </body>
 
 </html>
-```
+{% endhighlight %}
 
 Now if you double-click on index.html it should open up in a web browser and you should see something like: 
 
 ![HTML Hello World](html_hello_world.png "HTML Hello World")
 
 
-## Create an app.js javascript script
+## **Create an app.js javascript script**
 
 For a good introduction to Javascript syntax and some basic functions, check out the [w3schools Javascript tutorial](http://www.w3schools.com/js/default.asp)
 
@@ -48,13 +48,13 @@ For this tutorial, we'll be writing an extremely simple Javascript script.
 1. In the same website folder where you created ```index.html```, create a new file named ```app.js``` and open that file in a text editor
 2. Paste the following content into that file
 
-```
+{% highlight javascript %}
 // This will pop up an alert as soon as the script is run
 alert("Hello world from javascript!");
-```
+{% endhighlight %}
 
 
-## Add javascript to index.html
+## **Add javascript to index.html**
 
 Javascript can be added to a HTML page by including ```<script>``` tags which reference external javascript files.
 
@@ -62,7 +62,7 @@ Typically ```<script>``` tags are enclosed within the ```<body>``` tag and are t
 
 Let's add the jquery javascript library and our own custom javascript file to our page. To do that, replace the contents of the ```<body>``` tag in ```index.html``` with the following:
 
-```
+{% highlight html %}
   <body>
     <h1>Hello World Webpage</h1>
 
@@ -72,20 +72,20 @@ Let's add the jquery javascript library and our own custom javascript file to ou
     <!-- our javascript -->
     <script src="app.js"></script>
   </body>
-```
+{% endhighlight %}
 
 Now if you reopen or reload index.html, you should see an alert like: 
 
 ![Javascript Hello World](js_hello_world.png "Javascript Hello World")
 
 
-## Run javascript by clicking a button
+## **Run javascript by clicking a button**
 
 To make web pages which respond to user actions, you first need to add elements for the users to interact with and then you need to connect in a javascript function which can be triggered when that element is interacted with.
 
 As an example first let's add a ```<button>``` tag to the body. To do that, replace the contents of the ```<body>``` tag in ```index.html``` with the following:
 
-```
+{% highlight html %}
   <body>
     <h1>Hello World Webpage</h1>
 
@@ -100,28 +100,28 @@ As an example first let's add a ```<button>``` tag to the body. To do that, repl
     <!-- our javascript -->
     <script src="app.js"></script>
   </body>
-```
+{% endhighlight %}
 
 Note that this button will try to run the javascript function ```myButtonWasClicked()``` when it is clicked. Since that function doesn't yet exist, let's create it by replacing the contents of ```app.js``` with:
 
-```
+{% highlight javascript %}
 function myButtonWasClicked() {
   alert("The button was clicked!");
 }
-```
+{% endhighlight %}
 
 Now if you reopen or reload index.html and click the button labeled ```Press me!```, you should see an alert like: 
 
 ![Javascript Button Click](js_button_click.png "Javascript Button Click")
 
 
-## Make javascript update your page
+## **Make javascript update your page**
 
 Another thing which javascript can do is modify the content of your webpage by either adding, removing, or replacing HTML elements.
 
 As an example first let's add an empty ```<div>``` tag to the body which we will later update with text using javascript. To do that, replace the contents of the ```<body>``` tag in ```index.html``` with the following:
 
-```
+{% highlight html %}
   <body>
     <h1>Hello World Webpage</h1>
 
@@ -140,24 +140,24 @@ As an example first let's add an empty ```<div>``` tag to the body which we will
     <!-- our javascript -->
     <script src="app.js"></script>
   </body>
-```
+{% endhighlight %}
 
 Now let's change our button to update the ```<div>``` text instead of showing an alert. In ```app.js```, replace the ```myButtonWasClicked()``` function with the following:
 
-```
+{% highlight javascript %}
 // This is the function which handles button clicks
 function myButtonWasClicked() {
   // Select the tag with id="updateMe" and set its inner content
   $("#updateMe").text("The text is updated!");
 }
-```
+{% endhighlight %}
 
 Now if you reopen or reload index.html and click the button labeled ```Press me!```, you should modify the page to look like: 
 
 ![Javascript Div Update](js_div_update.png "Javascript Div Update")
 
 
-## Test your webpage
+## **Test your webpage**
 
 Before we proceed, make sure your index.html looks like [this](index.html) and your app.js looks like [this](app.js).
 
